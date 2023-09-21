@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Janisse Pérez - Formación Continua</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg">
+<style>
+    /* Estilos para la Sección de Contacto en contacto.html */
+    .contact {
+        background-color: #fff; /* Cambia el color de fondo */
+        color: #007acc; /* Cambia el color del texto */
+        padding: 50px 0;
+        margin-top: 70px;
+    }
+
+    .contact h2 {
+        font-size: 32px; /* Aumenta el tamaño del título */
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .contact form {
+        text-align: left; /* Alinea el contenido del formulario a la izquierda */
+    }
+
+    .contact label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1.8px solid #007acc; /* Cambia el color del borde */
+        border-radius: 4px;
+        background-color: transparent; /* Hace que los campos sean transparentes */
+        color: #007acc; /* Cambia el color del texto en los campos */
+    }
+
+    .contact button {
+        background-color: #007acc; /* Cambia el color de fondo del botón */
+        color: #fff; /* Cambia el color del texto del botón */
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .contact button:hover {
+        background-color: #2c00cc; /* Cambia el color de fondo al pasar el mouse */
+        color: #fff; /* Cambia el color del texto al pasar el mouse */
+    }
+
+    /* Estilos para el footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    footer p {
+        margin: 0;
+    }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Logo Janisse Pérez - Formación Continua">
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Formación</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/+50586534771" target="_blank" class="cta-button">Contáctanos</a>
+        </nav>
+    </header>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Formulario de Contacto</h2>
+            <p>Para obtener más información sobre nuestros servicios, por favor contáctanos a través de los siguientes medios:</p>
+            <p>Correo electrónico: jp.formacioncontinua@gmail.com</p>
+            <p>También puedes completar el siguiente formulario y nos pondremos en contacto contigo a la brevedad:</p>
+            <form action="procesar_formulario.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <button type="submit" class="cta-button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Uso</a>
+        </div>
+        <p>&copy; 2023 Janisse Pérez - Formación Continua - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

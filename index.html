@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Janisse Pérez - Formación Continua</title>
+    <link rel="icon" href="logo.jpg">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Logo Janisse Pérez - Formación Continua">
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="servicios.html">Formación</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/+50586534771" target="_blank" class="cta-button">Contáctanos</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="banner">
+        <h1>Soluciones de Capacitación y Formación a la Medida</h1>
+        <p>Desarrollo del Talento Humano</p>
+        <a href="#contacto" class="cta-button">Solicitar Información</a>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Nuestra Formación</h2>
+            <div class="service">
+                <img src="liderazgo.jpg" alt="Capacitación">
+                <h3>Capacitación en Liderazgo</h3>
+                <p>Ofrecemos cursos de liderazgo para el desarrollo del talento humano en tu empresa.</p>
+            </div>
+            <!-- Agrega más servicios aquí -->
+        </div>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Janisse Pérez - Formación Continua es una empresa dedicada a brindar soluciones de capacitación y
+                formación a medida. Nuestro compromiso es ayudar a las empresas a desarrollar el talento humano y
+                alcanzar sus metas.</p>
+        </div>
+    </section>
+
+    <!-- ... (código HTML anterior) ... -->
+
+    <section id="galeria" class="gallery">
+        <h2>Cursos y Talleres</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="curso1.jpg" alt="Curso 1" data-titulo="Diplomado en Sistema HACCP" data-descripcion="📢¡Llegó el momento!
+
+                🔍Si estás buscando un programa de formación completo, que te permita especializarte y fortalecer tus capacitadades en inocuidad alimentaria, este Diplomado en Sistema HACCP es para vos.
+                
+                ✅ 100% virtual
+                ✅ 100 horas académicas
+                ✅ Modalidad sabatina">
+            </div>
+            <div class="image-item">
+                <img src="taller1.jpg" alt="Taller 1" data-titulo="Taller - Webinar"
+                    data-descripcion="Bienestar y Productividad">
+            </div>
+            <div class="image-item">
+                <img src="curso2.jpg" alt="Curso 2" data-titulo="Taller Working Backwards" data-descripcion="🚀 ¡Descubre el Secreto de Amazon para el Éxito en Desarrollo de Productos! 🌟
+
+                ¿Quieres aprender cómo Amazon revoluciona el mercado a través de su enfoque centrado en el consumidor?
+                
+                ¡No busques más!
+                Únete a nuestro Taller sobre Working Backwards: la metodología de Amazon para desarrollar productos o
+                        servicios que cautivan a tus clientes.">
+            </div>
+            <!-- Agrega más imágenes de formación aquí -->
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close-button" onclick="cerrarLightbox()">&times;</span>
+            <h3 id="curso-titulo"></h3>
+            <p id="curso-descripcion"></p>
+        </div>
+    </div>
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/+50586534771" target="_blank">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+
+
+    <section id="contacto" class="contact">
+        <!-- Contenido de Contacto aquí -->
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Uso</a>
+        </div>
+        <p>&copy; 2023 Janisse Pérez - Formación Continua - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Función para mostrar información del curso o taller en el lightbox
+        function mostrarInfo(titulo, descripcion) {
+            document.getElementById("curso-titulo").textContent = titulo;
+            document.getElementById("curso-descripcion").textContent = descripcion;
+            document.getElementById("lightbox").style.display = "block";
+        }
+
+        // Función para cerrar el lightbox
+        function cerrarLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        // Agrega eventos de clic a las imágenes
+        const imageItems = document.querySelectorAll(".image-item img");
+        imageItems.forEach(function (img) {
+            img.addEventListener("click", function () {
+                const titulo = img.getAttribute("data-titulo");
+                const descripcion = img.getAttribute("data-descripcion");
+                mostrarInfo(titulo, descripcion);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
